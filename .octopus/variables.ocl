@@ -1,0 +1,11 @@
+variable "Var3" {
+    value {}
+}
+
+variable "Var2" {
+    value {}
+}
+
+variable "Var1" {
+    value {}
+}
