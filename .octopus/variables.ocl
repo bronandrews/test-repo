@@ -1,5 +1,5 @@
 variable "Var4" {
-    value {"var4"}
+    value {}
 }
 
 variable "Var3" {
