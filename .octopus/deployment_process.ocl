@@ -44,3 +44,19 @@ step "ecs-3-start-remaining" {
         worker_pool_variable = ""
     }
 }
+
+step "ecs-4-make-secondary-taskset-be-primary" {
+    name = "ECS 4 - Make Secondary taskset be Primary"
+    properties = {
+        Octopus.Action.TargetRoles = "test"
+    }
+
+    action {
+        properties = {
+            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.Template.Id = "ActionTemplates-113"
+            Octopus.Action.Template.Version = "3"
+        }
+        worker_pool_variable = ""
+    }
+}
