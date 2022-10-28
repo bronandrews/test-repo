@@ -1,15 +1,15 @@
-variable "Var4" {
-    value {}
-}
-
-variable "Var3" {
-    value {}
+variable "Var1" {
+    value "1" {}
 }
 
 variable "Var2" {
-    value {}
+    value "2" {}
 }
 
-variable "Var1" {
-    value {}
+variable "Var3" {
+    value "3" {}
+}
+
+variable "Var4" {
+    value "Hello" {}
 }
