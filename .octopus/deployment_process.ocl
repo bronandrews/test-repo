@@ -1,0 +1,46 @@
+step "ecs-1-initial-deploy" {
+    name = "ECS 1 - Initial Deploy"
+    properties = {
+        Octopus.Action.TargetRoles = "test"
+    }
+
+    action {
+        properties = {
+            Octopus.Action.Template.Id = "ActionTemplates-110"
+            Octopus.Action.Template.Version = "2"
+        }
+        worker_pool_variable = ""
+    }
+}
+
+step "ecs-2-start-the-canary" {
+    name = "ECS 2 - Start the canary"
+    properties = {
+        Octopus.Action.TargetRoles = "test"
+    }
+
+    action {
+        properties = {
+            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.Template.Id = "ActionTemplates-111"
+            Octopus.Action.Template.Version = "1"
+        }
+        worker_pool_variable = ""
+    }
+}
+
+step "ecs-3-start-remaining" {
+    name = "ECS 3 - Start remaining"
+    properties = {
+        Octopus.Action.TargetRoles = "test"
+    }
+
+    action {
+        properties = {
+            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.Template.Id = "ActionTemplates-112"
+            Octopus.Action.Template.Version = "1"
+        }
+        worker_pool_variable = ""
+    }
+}
