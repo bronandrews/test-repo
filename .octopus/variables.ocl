@@ -1,3 +1,7 @@
+variable "Var4" {
+    value {"var4"}
+}
+
 variable "Var3" {
     value {}
 }
